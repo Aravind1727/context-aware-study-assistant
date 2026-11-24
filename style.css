@@ -1,0 +1,292 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #183247;
+  background: #edf3f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  background: #edf3f6;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  min-height: 42px;
+  padding: 9px 15px;
+  border: 1px solid #075b7a;
+  border-radius: 9px;
+  background: #075b7a;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #064965;
+}
+
+button:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #e89b22;
+  outline-offset: 2px;
+}
+
+.app {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 28px;
+  border: 1px solid #d4e0e7;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgb(25 55 75 / 8%);
+}
+
+.app-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #064a69;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+.app-header p {
+  margin: 5px 0 0;
+  color: #536d80;
+}
+
+.secondary-button {
+  flex: 0 0 auto;
+  background: #fff;
+  color: #075b7a;
+}
+
+.secondary-button:hover {
+  background: #f0f7fa;
+}
+
+.prototype-note {
+  margin: 22px 0;
+  padding: 13px 16px;
+  border-left: 4px solid #5a9d88;
+  border-radius: 6px;
+  background: #f0f6f7;
+  color: #38566b;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 20px;
+  align-items: start;
+}
+
+.conversation,
+.system-panel,
+.demo-panel,
+.chat-log {
+  border: 1px solid #d7e2e8;
+  border-radius: 12px;
+}
+
+.conversation {
+  min-width: 0;
+  padding: 16px;
+  background: #fff;
+}
+
+.demo-panel {
+  margin-bottom: 16px;
+  padding: 14px;
+  background: #f6f9fa;
+}
+
+.demo-panel h2,
+.system-panel h2 {
+  margin: 0 0 10px;
+  color: #123e59;
+  font-size: 1.05rem;
+}
+
+.demo-panel button {
+  margin: 3px 5px 3px 0;
+}
+
+.chat-log {
+  display: flex;
+  min-height: 320px;
+  max-height: 430px;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  padding: 16px;
+  background: #f7f9fa;
+  scroll-behavior: smooth;
+}
+
+.welcome-message {
+  margin: auto;
+  color: #718391;
+  text-align: center;
+}
+
+.message {
+  width: fit-content;
+  max-width: 88%;
+  padding: 11px 14px;
+  border-radius: 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.message.user {
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  background: #075b7a;
+  color: #fff;
+}
+
+.message.assistant {
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  background: #e8eef1;
+  color: #213849;
+}
+
+.message-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.message-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.message-controls button {
+  min-height: 38px;
+  padding: 7px 12px;
+}
+
+.message-form {
+  margin-top: 18px;
+}
+
+.message-form label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 700;
+}
+
+.input-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 58px;
+  resize: vertical;
+  padding: 11px 12px;
+  border: 1px solid #afc1cc;
+  border-radius: 9px;
+  color: #183247;
+}
+
+.input-row button {
+  flex: 0 0 auto;
+  min-width: 68px;
+}
+
+.status-message {
+  min-height: 1.5em;
+  margin: 8px 0 0;
+  color: #536d80;
+  font-size: 0.9rem;
+}
+
+.system-panel {
+  padding: 16px;
+  background: #f7f9fa;
+}
+
+.system-panel ol {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.system-panel li {
+  margin: 0 0 10px;
+  padding-left: 2px;
+}
+
+.scope-note {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #d7e2e8;
+  color: #536d80;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 10px;
+  }
+
+  .app {
+    padding: 18px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .system-panel {
+    order: 2;
+  }
+
+  .chat-log {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    flex-direction: column;
+  }
+
+  .message {
+    max-width: 96%;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .input-row button {
+    align-self: flex-end;
+  }
+}

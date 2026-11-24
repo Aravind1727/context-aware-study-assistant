@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Context-aware study assistant</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div>
+        <h1>Context-aware study assistant</h1>
+        <p>It checks what you mean before answering an unclear request.</p>
+      </div>
+      <button id="newChatButton" class="secondary-button" type="button">New chat</button>
+    </header>
+
+    <p class="prototype-note">
+      Prototype: when a message is unclear, the system automatically checks earlier
+      user messages in this chat. Context matching and answer generation use simulated
+      rules; no live AI model is connected.
+    </p>
+
+    <div class="workspace">
+      <section class="conversation" aria-label="Chat interaction">
+        <section class="demo-panel" aria-labelledby="demoHeading">
+          <h2 id="demoHeading">Try an example</h2>
+          <button id="contextDemoButton" type="button">Relevant context</button>
+          <button id="missingDemoButton" type="button">Missing context</button>
+          <button id="correctionDemoButton" type="button">Correct a guess</button>
+        </section>
+
+        <section
+          id="chatLog"
+          class="chat-log"
+          aria-label="Conversation"
+          aria-live="polite"
+        >
+          <p class="welcome-message">Try an example or type a study question below.</p>
+        </section>
+
+        <form id="messageForm" class="message-form">
+          <label for="messageInput">Your message</label>
+          <div class="input-row">
+            <textarea
+              id="messageInput"
+              rows="2"
+              placeholder="For example: Explain it in simple words."
+              required
+            ></textarea>
+            <button type="submit">Send</button>
+          </div>
+        </form>
+
+        <p id="statusMessage" class="status-message" role="status"></p>
+      </section>
+
+      <aside class="system-panel" aria-labelledby="systemHeading">
+        <h2 id="systemHeading">System process</h2>
+        <ol id="systemTrace">
+          <li>Waiting for a message.</li>
+        </ol>
+        <p id="systemStatus" class="scope-note">
+          Context scope: earlier user messages in this chat only.
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <script src="./app.js?v=5"></script>
+</body>
+</html>
