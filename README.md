@@ -22,4 +22,7 @@ I used ChatGPT to discuss the project scope, review the interaction flow, sugges
 - `index.html` — chat interface
 - `style.css` — page styling
 - `app.js` — clarification rules and simulated responses
-- `screenshots/` — screenshots of the three example interactions
+- `1.png` — relevant-context example
+- `2.png` — missing-context example
+- `3.png` — correction example
+- `Flowchart.png` — system flow diagram
