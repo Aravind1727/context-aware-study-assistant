@@ -1,8 +1,5 @@
-# word count:
 # Context-Aware Study Assistant
-
-README prose word count: [calculate before submission]
-
+README prose word count: 175
 ## Project status
 This is a browser-based prototype for clarifying unclear study questions. It checks earlier user messages in the current chat, asks for confirmation or correction when it finds likely context, and asks a follow-up question when context is missing. The clarification flow uses JavaScript rules. Sample answers are scripted; no live AI model is connected.
 
